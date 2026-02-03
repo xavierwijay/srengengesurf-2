@@ -6137,3 +6137,79 @@ h6 {
     font-size: 0.95rem !important;
   }
 }
+
+/* Floating Burger Menu on Scroll (Mobile) */
+@media (max-width: 768px) {
+  /* Initial State for Scrolled Header on Mobile */
+  .header.scrolled {
+    background: transparent;
+    border-bottom: none;
+    box-shadow: none;
+    pointer-events: none;
+    height: 0;
+    transition: all 0.3s ease;
+  }
+
+  .header.scrolled .logo-link {
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-20px);
+    transition: all 0.3s ease;
+  }
+
+  /* Default Button State (Hidden when scrolled, until direction check) */
+  .header.scrolled .mobile-menu-btn {
+    opacity: 0;
+    transform: scale(0.8) translateY(-10px);
+    pointer-events: none;
+    transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  }
+
+  /* SCROLL DOWN: Hide everything */
+  .header.scroll-down .mobile-menu-btn {
+    opacity: 0;
+    transform: scale(0.8) translateY(-20px);
+    pointer-events: none;
+  }
+
+  /* SCROLL UP: Show FAB Burger */
+  .header.scrolled.scroll-up .mobile-menu-btn {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+    pointer-events: auto;
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    background: var(--primary-color);
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    box-shadow: 0 8px 24px rgba(237, 154, 85, 0.4);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid white;
+    z-index: 1002;
+    padding: 0;
+  }
+
+  /* Adjust Hamburger Lines for FAB Mode */
+  .header.scrolled .hamburger {
+    width: 24px;
+    height: 24px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 5px;
+    align-items: center;
+  }
+
+  .header.scrolled .hamburger span {
+    background-color: white;
+    width: 20px;
+    height: 2px;
+    border-radius: 2px;
+    transition: all 0.3s ease;
+    display: block;
+  }
+}

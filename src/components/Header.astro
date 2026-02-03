@@ -160,15 +160,33 @@
     }, 2000);
   }
 
-  // Header Scroll
+  // Header Scroll & Direction Logic
   const header = document.getElementById('header');
+  let lastScrollY = window.scrollY;
+
   if (header) {
       window.addEventListener("scroll", () => {
-          if (window.scrollY > 50) {
+          const currentScrollY = window.scrollY;
+          
+          // Basic Scrolled State
+          if (currentScrollY > 50) {
               header.classList.add("scrolled");
           } else {
               header.classList.remove("scrolled");
           }
+
+          // Directional State
+          if (currentScrollY > lastScrollY && currentScrollY > 100) {
+              // Scrolling Down
+              header.classList.remove("scroll-up");
+              header.classList.add("scroll-down");
+          } else if (currentScrollY < lastScrollY || currentScrollY <= 100) {
+              // Scrolling Up or at Top
+              header.classList.remove("scroll-down");
+              header.classList.add("scroll-up");
+          }
+
+          lastScrollY = currentScrollY;
       }, { passive: true });
   }
 
