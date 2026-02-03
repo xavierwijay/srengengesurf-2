@@ -1,0 +1,120 @@
+---
+---
+
+<section class="section about" id="about" role="region" aria-labelledby="about-title">
+  <div class="container">
+    <!-- About Section Stickers -->
+    <img src="/img/stiker/stikerburung.png" alt="Decorative sticker" class="about-sticker about-sticker-1" data-aos="fade-in" data-aos-delay="100" />
+    <img src="/img/stiker/stikerkelapa.png" alt="Decorative sticker" class="about-sticker about-sticker-2" data-aos="fade-in" data-aos-delay="200" />
+    <img src="/img/stiker/stikerbintang2.png" alt="Decorative sticker" class="about-sticker about-sticker-3" data-aos="fade-in" data-aos-delay="300" />
+    <img src="/img/stiker/stikerbintang.png" alt="Decorative sticker" class="about-sticker about-sticker-4" data-aos="fade-in" data-aos-delay="400" />
+
+    <header class="section-header" data-aos="fade-up">
+      <img id="about-title" class="about-title-image" src="/img/title/judulaboutus.png" alt="Apa itu Srengenge - Surf Camp Authentic dengan Genuine Connection" />
+      <p class="section-subtitle">
+        Srengenge tumbuh dari cinta pada laut dan irama selancar. Kami mengajakmu menjelajah dengan tempo pelan, membangun cerita, dan merayakan hangatnya laut serta budaya pesisir
+      </p>
+    </header>
+
+    <div class="swiper about-swiper" data-aos="fade-up" data-aos-delay="100">
+      <div class="swiper-wrapper">
+        <!-- Card 1: Good Friends -->
+        <div class="swiper-slide">
+          <article class="card" data-aos="fade-up" data-aos-delay="150">
+            <span class="card-number" aria-hidden="true">01</span>
+            <div class="card-content">
+              <img src="/img/aboutus/aboutus1.png" alt="Friends enjoying activities at camp" class="card-image" loading="lazy" />
+              <h3 class="card-title">Genuine connection</h3>
+              <p class="card-description">Kami menawarkan pengalaman seperti main bersama teman terdekat!</p>
+            </div>
+          </article>
+        </div>
+
+        <!-- Card 2: Good Surf -->
+        <div class="swiper-slide">
+          <article class="card" data-aos="fade-up" data-aos-delay="200">
+            <span class="card-number" aria-hidden="true">02</span>
+            <div class="card-content">
+              <img src="/img/aboutus/aboutus3.png" alt="Surfer riding a wave" class="card-image" loading="lazy" />
+              <h3 class="card-title">Beginner friendly spot</h3>
+              <p class="card-description">Dari pemula sampai pro Semua bisa main disini!</p>
+            </div>
+          </article>
+        </div>
+
+        <!-- Card 3: Good Food -->
+        <div class="swiper-slide">
+          <article class="card" data-aos="fade-up" data-aos-delay="250">
+            <span class="card-number" aria-hidden="true">03</span>
+            <div class="card-content">
+              <img src="/img/aboutus/aboutus4.png" alt="Delicious food and dining experience" class="card-image" loading="lazy" />
+              <h3 class="card-title">Melibatkan masyarakat lokal</h3>
+              <p class="card-description">makanan yang berasal dari lingkungan setempat, dan menggandeng komunitas surfer lokal</p>
+            </div>
+          </article>
+        </div>
+
+        <!-- Card 4: Good Memory -->
+        <div class="swiper-slide">
+          <article class="card" data-aos="fade-up" data-aos-delay="300">
+            <span class="card-number" aria-hidden="true">04</span>
+            <div class="card-content">
+              <img src="/img/aboutus/aboutus2.png" alt="Memorable moments and experiences" class="card-image" loading="lazy" />
+              <h3 class="card-title">Fueled by passion</h3>
+              <p class="card-description">Bukan money oriented tapi Srengenge berjalan atas kecintaan kita terhadap laut dan surfing</p>
+            </div>
+          </article>
+        </div>
+      </div>
+
+      <!-- Swiper Navigation -->
+      <button class="swiper-button-prev swiper-nav-button" aria-label="Previous slide"></button>
+      <button class="swiper-button-next swiper-nav-button" aria-label="Next slide"></button>
+    </div>
+
+    <!-- Swiper Pagination -->
+    <div class="swiper-pagination-container" data-aos="fade-up" data-aos-delay="200">
+      <div class="swiper-pagination about-pagination"></div>
+    </div>
+  </div>
+</section>
+
+<script>
+  import Swiper from 'swiper';
+  import { Navigation, Pagination, Autoplay } from 'swiper/modules';
+
+  const swiper = new Swiper('.about-swiper', {
+    modules: [Navigation, Pagination, Autoplay],
+    loop: true,
+    spaceBetween: 24,
+    grabCursor: true,
+    autoplay: {
+      delay: 5000,
+      disableOnInteraction: false,
+    },
+    pagination: {
+      el: ".about-pagination",
+      type: "progressbar",
+      clickable: true,
+    },
+    navigation: {
+      nextEl: ".swiper-button-next",
+      prevEl: ".swiper-button-prev",
+    },
+    breakpoints: {
+      320: { slidesPerView: 1, spaceBetween: 10 },
+      640: { slidesPerView: 1, spaceBetween: 16 },
+      768: { slidesPerView: 2, spaceBetween: 24 },
+      1024: { slidesPerView: 3, spaceBetween: 32 },
+    },
+    on: {
+        init: function (swiper) {
+             // Custom arrows injection
+            const prev = swiper.navigation.prevEl;
+            const next = swiper.navigation.nextEl;
+            if(prev) prev.innerHTML = `<svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" /></svg>`;
+            if(next) next.innerHTML = `<svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" /></svg>`;
+        }
+    }
+  });
+</script>

@@ -1,0 +1,72 @@
+---
+import '../styles/global.css';
+import 'swiper/css';
+import 'swiper/css/navigation';
+import 'swiper/css/pagination';
+import 'aos/dist/aos.css';
+
+interface Props {
+	title: string;
+	description?: string;
+}
+
+const { 
+  title, 
+  description = "Srengenge Surf Camp di Pantai Wediombo, Yogyakarta - Pengalaman selancar authentic dengan genuine connection, spot ramah pemula, makanan lokal, dan kecintaan terhadap laut. Surf trip yang memorable!" 
+} = Astro.props;
+---
+
+<!doctype html>
+<html lang="id">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0" />
+		<link rel="icon" type="image/png" href="/img/srngengelogoo.png" />
+		
+        <!-- SEO & Meta -->
+        <meta name="description" content={description} />
+        <meta name="keywords" content="surf camp yogyakarta, pantai wediombo, selancar pemula, surf trip indonesia, camp pantai gunung kidul, srengenge surf, surfing jogja, wisata pantai jogja, surf lesson indonesia" />
+        <meta name="coverage" content="Worldwide" />
+        <meta name="distribution" content="Global" />
+        <meta name="rating" content="General" />
+        <meta name="revisit-after" content="7 days" />
+        <meta name="author" content="Srengenge" />
+        <meta name="theme-color" content="#ed9a55" />
+        <meta name="geo.region" content="ID-YO" />
+        <meta name="geo.placename" content="Pantai Wediombo, Gunung Kidul, Yogyakarta" />
+        <meta name="geo.position" content="-8.153508;110.706540" />
+        <meta name="ICBM" content="-8.153508, 110.706540" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="format-detection" content="telephone=no" />
+        
+        <!-- Open Graph -->
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://srengenge.com/" />
+        <meta property="og:title" content="Srengenge Surf Camp - Pantai Wediombo Yogyakarta" />
+        <meta property="og:description" content="Surf camp authentic di Pantai Wediombo dengan genuine connection, spot ramah pemula, dan kecintaan terhadap laut. Gabung surf trip memorable bersama kami!" />
+        <meta property="og:image" content="/img/hero1.png" />
+
+        <!-- Twitter -->
+        <meta property="twitter:card" content="summary_large_image" />
+        <meta property="twitter:url" content="https://srengenge.com/" />
+        <meta property="twitter:title" content="Srengenge Surf Camp - Pantai Wediombo Yogyakarta" />
+        <meta property="twitter:description" content="Surf camp authentic di Pantai Wediombo dengan genuine connection, spot ramah pemula, dan kecintaan terhadap laut." />
+        <meta property="twitter:image" content="/img/hero1.png" />
+
+		<title>{title}</title>
+
+        <!-- Fonts (Preconnect handled by Astro usually, but keeping explicit for safely) -->
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+        <script is:inline>
+            // Initialize AOS
+            // This is a partial polyfill if we rely on window.AOS, but we will likely import it in components. 
+            // However, script.js had complex logic. We will migrate logic to components.
+        </script>
+	</head>
+	<body>
+		<slot />
+	</body>
+</html>

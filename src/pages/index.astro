@@ -1,0 +1,51 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Header from '../components/Header.astro';
+import Hero from '../components/Hero.astro';
+import About from '../components/About.astro';
+import Gallery from '../components/Gallery.astro';
+import Packages from '../components/Packages.astro';
+import Reviews from '../components/Reviews.astro';
+import Contact from '../components/Contact.astro';
+import Footer from '../components/Footer.astro';
+---
+
+<Layout title="Srengenge Surf Camp - Pantai Wediombo Yogyakarta | Surf Trip Authentic Indonesia">
+  <Header />
+  <main>
+    <Hero />
+    <About />
+    <Gallery />
+    <Packages />
+    <Reviews />
+    <Contact />
+  </main>
+  <Footer />
+</Layout>
+
+<script>
+  import AOS from 'aos';
+  
+  // Initialize AOS
+  AOS.init({
+      once: true,
+      duration: 700,
+      offset: 40,
+      easing: "ease-out-cubic",
+      delay: 0,
+  });
+
+  // Service Worker Registration
+  if ("serviceWorker" in navigator) {
+    window.addEventListener("load", () => {
+      navigator.serviceWorker
+        .register("/sw.js")
+        .then((registration) => {
+          console.log("SW registered: ", registration);
+        })
+        .catch((registrationError) => {
+          console.log("SW registration failed: ", registrationError);
+        });
+    });
+  }
+</script>

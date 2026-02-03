@@ -1,0 +1,201 @@
+---
+---
+
+<!-- Loading Screen - originally in body, putting here or in Layout. Putting here for now as it's UI -->
+<div class="loading" id="loading">
+  <div class="spinner"></div>
+</div>
+
+<header class="header" id="header">
+  <div class="header-container">
+    <a href="#" class="logo-link" aria-label="Srengenge Home">
+      <img
+        src="/img/srngengelogoo.png"
+        alt="Srengenge Logo"
+        class="logo"
+        loading="eager"
+        fetchpriority="high"
+      />
+    </a>
+
+    <nav class="nav-menu" role="navigation" aria-label="Main navigation">
+      <a href="#about" class="nav-link" aria-label="About Us">
+        <img
+          src="/img/aboutus.png"
+          alt="About Us"
+          class="nav-icon nav-icon-about"
+        />
+      </a>
+      <a href="#gallery" class="nav-link" aria-label="Gallery">
+        <img
+          src="/img/Gallery.png"
+          alt="Gallery"
+          class="nav-icon nav-icon-gallery"
+        />
+      </a>
+      <a href="#packages" class="nav-link" aria-label="Packages">
+        <img
+          src="/img/packages.png"
+          alt="Packages"
+          class="nav-icon nav-icon-packages"
+        />
+      </a>
+      <a href="#review" class="nav-link" aria-label="Reviews">
+        <img
+          src="/img/review.png"
+          alt="Reviews"
+          class="nav-icon nav-icon-reviews"
+        />
+      </a>
+      <a href="#contact" class="btn btn-outline" aria-label="Contact Us">
+        <img
+          src="/img/contact.png"
+          alt="Contact"
+          class="nav-icon nav-icon-contact"
+        />
+      </a>
+    </nav>
+
+    <button
+      class="mobile-menu-btn"
+      id="burgerBtn"
+      aria-label="Open menu"
+      aria-expanded="false"
+    >
+      <div class="hamburger">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </button>
+  </div>
+</header>
+
+<!-- Mobile Menu Overlay -->
+<div
+  class="mobile-menu-overlay"
+  id="mobileMenuOverlay"
+  role="dialog"
+  aria-label="Mobile menu overlay"
+  aria-hidden="true"
+></div>
+
+<!-- Mobile Menu -->
+<div
+  class="mobile-menu"
+  id="mobileMenu"
+  role="dialog"
+  aria-label="Mobile menu"
+  aria-hidden="true"
+>
+  <div class="mobile-menu-header">
+    <h2 class="mobile-menu-title">Menu</h2>
+    <button class="close-menu" id="closeMenu" aria-label="Close menu">
+      &times;
+    </button>
+  </div>
+
+  <nav
+    class="mobile-menu-nav"
+    role="navigation"
+    aria-label="Mobile navigation"
+  >
+    <a href="#about" class="mobile-link" aria-label="About Us">
+      <img
+        src="/img/aboutus.png"
+        alt="About Us"
+        class="mobile-icon mobile-icon-about"
+      />
+    </a>
+    <a href="#gallery" class="mobile-link" aria-label="Gallery">
+      <img
+        src="/img/Gallery.png"
+        alt="Gallery"
+        class="mobile-icon mobile-icon-gallery"
+      />
+    </a>
+    <a href="#packages" class="mobile-link" aria-label="Packages">
+      <img
+        src="/img/packages.png"
+        alt="Packages"
+        class="mobile-icon mobile-icon-packages"
+      />
+    </a>
+    <a href="#review" class="mobile-link" aria-label="Reviews">
+      <img
+        src="/img/review.png"
+        alt="Reviews"
+        class="mobile-icon mobile-icon-reviews"
+      />
+    </a>
+    <a href="#contact" class="mobile-link" aria-label="Contact Us">
+      <img
+        src="/img/contact.png"
+        alt="Contact"
+        class="mobile-icon mobile-icon-contact"
+      />
+    </a>
+  </nav>
+
+  <!-- Mobile Menu Footer -->
+  <div class="mobile-menu-footer">
+    <p>&copy; 2025 Srengenge Surf & Camp. All rights reserved.</p>
+  </div>
+</div>
+
+<script>
+  // Loading Logic
+  const loading = document.getElementById('loading');
+  if (loading) {
+     window.addEventListener("load", () => {
+      setTimeout(() => {
+        loading.classList.add("hidden");
+        setTimeout(() => { loading.style.display = "none"; }, 500);
+      }, 500);
+    });
+    // Fallback
+    setTimeout(() => {
+       loading.classList.add("hidden");
+       setTimeout(() => { loading.style.display = "none"; }, 500);
+    }, 2000);
+  }
+
+  // Header Scroll
+  const header = document.getElementById('header');
+  if (header) {
+      window.addEventListener("scroll", () => {
+          if (window.scrollY > 50) {
+              header.classList.add("scrolled");
+          } else {
+              header.classList.remove("scrolled");
+          }
+      }, { passive: true });
+  }
+
+  // Mobile Menu
+  const burgerBtn = document.getElementById('burgerBtn');
+  const closeMenuBtn = document.getElementById('closeMenu');
+  const mobileMenu = document.getElementById('mobileMenu');
+  const overlay = document.getElementById('mobileMenuOverlay');
+  const links = document.querySelectorAll('.mobile-link');
+  let isOpen = false;
+
+  function openMenu() {
+    mobileMenu?.classList.add("active");
+    overlay?.classList.add("active");
+    isOpen = true;
+    document.body.classList.add("no-scroll");
+  }
+
+  function closeMenu() {
+    mobileMenu?.classList.remove("active");
+    overlay?.classList.remove("active");
+    isOpen = false;
+    document.body.classList.remove("no-scroll");
+  }
+
+  burgerBtn?.addEventListener('click', openMenu);
+  closeMenuBtn?.addEventListener('click', closeMenu);
+  overlay?.addEventListener('click', closeMenu);
+  links.forEach(link => link.addEventListener('click', closeMenu));
+</script>
