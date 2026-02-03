@@ -1,140 +1,318 @@
 ---
 ---
 
-<section class="section about" id="about" role="region" aria-labelledby="about-title">
+<section class="section about" id="about">
   <div class="container">
     <!-- About Section Stickers -->
-    <img src="/img/stiker/stikerburung.png" alt="Decorative sticker" class="about-sticker about-sticker-1" data-aos="fade-in" data-aos-delay="100" />
-    <img src="/img/stiker/stikerkelapa.png" alt="Decorative sticker" class="about-sticker about-sticker-2" data-aos="fade-in" data-aos-delay="200" />
-    <img src="/img/stiker/stikerbintang2.png" alt="Decorative sticker" class="about-sticker about-sticker-3" data-aos="fade-in" data-aos-delay="300" />
-    <img src="/img/stiker/stikerbintang.png" alt="Decorative sticker" class="about-sticker about-sticker-4" data-aos="fade-in" data-aos-delay="400" />
+    <img src="/img/stiker/stikerburung.png" alt="Decorative sticker" class="about-sticker about-sticker-1" loading="lazy" />
+    <img src="/img/stiker/stikerkelapa.png" alt="Decorative sticker" class="about-sticker about-sticker-2" loading="lazy" />
+    <img src="/img/stiker/stikerbintang2.png" alt="Decorative sticker" class="about-sticker about-sticker-3" loading="lazy" />
+    <img src="/img/stiker/stikerbintang.png" alt="Decorative sticker" class="about-sticker about-sticker-4" loading="lazy" />
 
-    <header class="section-header" data-aos="fade-up">
-      <img id="about-title" class="about-title-image" src="/img/title/judulaboutus.png" alt="Apa itu Srengenge - Surf Camp Authentic dengan Genuine Connection" />
+    <header class="section-header">
+      <img
+        class="about-title-image"
+        src="/img/title/judulaboutus.png"
+        alt="About Us"
+        loading="lazy"
+      />
       <p class="section-subtitle">
         Srengenge tumbuh dari cinta pada laut dan irama selancar. Kami mengajakmu menjelajah dengan tempo pelan, membangun cerita, dan merayakan hangatnya laut serta budaya pesisir
       </p>
     </header>
 
-    <div class="swiper about-swiper" data-aos="fade-up" data-aos-delay="100">
-      <div class="swiper-wrapper">
-        <!-- Card 1: Good Friends -->
-        <div class="swiper-slide">
-          <article class="card" data-aos="fade-up" data-aos-delay="150">
-            <span class="card-number" aria-hidden="true">01</span>
-            <div class="card-content">
-              <img src="/img/aboutus/aboutus1.png" alt="Friends enjoying activities at camp" class="card-image" loading="lazy" />
-              <h3 class="card-title">Genuine connection</h3>
-              <p class="card-description">Kami menawarkan pengalaman seperti main bersama teman terdekat!</p>
-            </div>
-          </article>
+    <div class="about-carousel-container">
+      <div class="swiper about-swiper">
+        <div class="swiper-wrapper">
+          <!-- Card 1 -->
+          <div class="swiper-slide">
+            <article class="about-card">
+              <span class="card-number">01</span>
+              <div class="card-image-wrapper">
+                <img src="/img/aboutus/aboutus1.png" alt="Genuine Connection" class="card-image" loading="lazy" />
+              </div>
+              <div class="card-content">
+                <h3 class="card-title">Genuine connection</h3>
+                <p class="card-description">Kami menawarkan pengalaman seperti main bersama teman terdekat!</p>
+              </div>
+            </article>
+          </div>
+
+          <!-- Card 2 -->
+          <div class="swiper-slide">
+            <article class="about-card">
+              <span class="card-number">02</span>
+              <div class="card-image-wrapper">
+                <img src="/img/aboutus/aboutus3.png" alt="Beginner Friendly" class="card-image" loading="lazy" />
+              </div>
+              <div class="card-content">
+                <h3 class="card-title">Beginner friendly spot</h3>
+                <p class="card-description">Dari pemula sampai pro Semua bisa main disini!</p>
+              </div>
+            </article>
+          </div>
+
+          <!-- Card 3 -->
+          <div class="swiper-slide">
+            <article class="about-card">
+              <span class="card-number">03</span>
+              <div class="card-image-wrapper">
+                <img src="/img/aboutus/aboutus4.png" alt="Local Community" class="card-image" loading="lazy" />
+              </div>
+              <div class="card-content">
+                <h3 class="card-title">Melibatkan masyarakat</h3>
+                <p class="card-description">Makanan dari lingkungan setempat, menggandeng komunitas surfer lokal</p>
+              </div>
+            </article>
+          </div>
+
+          <!-- Card 4 -->
+          <div class="swiper-slide">
+            <article class="about-card">
+              <span class="card-number">04</span>
+              <div class="card-image-wrapper">
+                <img src="/img/aboutus/aboutus2.png" alt="Passion" class="card-image" loading="lazy" />
+              </div>
+              <div class="card-content">
+                <h3 class="card-title">Fueled by passion</h3>
+                <p class="card-description">Bukan money oriented tapi berjalan atas kecintaan terhadap laut</p>
+              </div>
+            </article>
+          </div>
         </div>
 
-        <!-- Card 2: Good Surf -->
-        <div class="swiper-slide">
-          <article class="card" data-aos="fade-up" data-aos-delay="200">
-            <span class="card-number" aria-hidden="true">02</span>
-            <div class="card-content">
-              <img src="/img/aboutus/aboutus3.png" alt="Surfer riding a wave" class="card-image" loading="lazy" />
-              <h3 class="card-title">Beginner friendly spot</h3>
-              <p class="card-description">Dari pemula sampai pro Semua bisa main disini!</p>
-            </div>
-          </article>
+        <!-- Navigation -->
+        <div class="swiper-nav-btn prev-btn">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" /></svg>
         </div>
-
-        <!-- Card 3: Good Food -->
-        <div class="swiper-slide">
-          <article class="card" data-aos="fade-up" data-aos-delay="250">
-            <span class="card-number" aria-hidden="true">03</span>
-            <div class="card-content">
-              <img src="/img/aboutus/aboutus4.png" alt="Delicious food and dining experience" class="card-image" loading="lazy" />
-              <h3 class="card-title">Melibatkan masyarakat lokal</h3>
-              <p class="card-description">makanan yang berasal dari lingkungan setempat, dan menggandeng komunitas surfer lokal</p>
-            </div>
-          </article>
-        </div>
-
-        <!-- Card 4: Good Memory -->
-        <div class="swiper-slide">
-          <article class="card" data-aos="fade-up" data-aos-delay="300">
-            <span class="card-number" aria-hidden="true">04</span>
-            <div class="card-content">
-              <img src="/img/aboutus/aboutus2.png" alt="Memorable moments and experiences" class="card-image" loading="lazy" />
-              <h3 class="card-title">Fueled by passion</h3>
-              <p class="card-description">Bukan money oriented tapi Srengenge berjalan atas kecintaan kita terhadap laut dan surfing</p>
-            </div>
-          </article>
+        <div class="swiper-nav-btn next-btn">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" /></svg>
         </div>
       </div>
-
-      <!-- Swiper Navigation -->
-      <button class="swiper-button-prev swiper-nav-button" aria-label="Previous slide"></button>
-      <button class="swiper-button-next swiper-nav-button" aria-label="Next slide"></button>
-    </div>
-
-    <!-- Swiper Pagination -->
-    <div class="swiper-pagination-container" data-aos="fade-up" data-aos-delay="200">
-      <div class="swiper-pagination about-pagination"></div>
+      
+      <div class="swiper-pagination-container">
+        <div class="swiper-pagination about-pagination"></div>
+      </div>
     </div>
   </div>
 </section>
 
 <style>
-  /* Base - Match Packages style for mobile card width */
-  @media (max-width: 639px) {
-    .swiper-slide {
-        width: 85% !important;
-        display: flex;
-        justify-content: center;
-    }
-    .card {
-        width: 100%;
-    }
+  .about {
+    position: relative;
+    padding-bottom: 60px;
   }
-  /* Ensure visible overflow for shadows if needed, though about cards usually flat or contained */
+
+  .about-carousel-container {
+    position: relative;
+    padding: 20px 0;
+  }
+
   .about-swiper {
-      padding: 20px 0; /* Add padding for shadow/scale effects if any */
-      overflow: visible !important;
+    padding: 20px 4px 40px !important; /* Safety padding for shadows */
+    overflow: visible !important;
   }
+
+  .swiper-slide {
+    height: auto;
+    display: flex;
+    justify-content: center;
+  }
+
+  /* Card Styles */
+  .about-card {
+    background: white;
+    border-radius: 24px;
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+    height: 100%;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.05); /* Soft shadow */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    border: 1px solid rgba(0,0,0,0.03);
+  }
+
+  .about-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 20px 40px rgba(237, 154, 85, 0.15); /* Orange hint on hover */
+  }
+
+  .card-number {
+    position: absolute;
+    top: 16px;
+    right: 20px;
+    font-size: 3rem;
+    font-weight: 900;
+    color: rgba(237, 154, 85, 0.15); /* Brand color transparent */
+    z-index: 1;
+    line-height: 1;
+  }
+
+  .card-image-wrapper {
+    width: 100%;
+    height: 200px;
+    overflow: hidden;
+  }
+
+  .card-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+  }
+
+  .about-card:hover .card-image {
+    transform: scale(1.05);
+  }
+
+  .card-content {
+    padding: 24px;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    position: relative;
+    z-index: 2;
+  }
+
+  .card-title {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: #1f2937;
+    margin-bottom: 12px;
+    line-height: 1.3;
+  }
+
+  .card-description {
+    font-size: 0.95rem;
+    color: #4b5563;
+    line-height: 1.6;
+    margin: 0;
+  }
+
+  /* Custom Navigation Buttons */
+  .swiper-nav-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 48px;
+    height: 48px;
+    background: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    cursor: pointer;
+    z-index: 10;
+    color: #ed9a55;
+    transition: all 0.3s ease;
+  }
+
+  .swiper-nav-btn:hover {
+    background: #ed9a55;
+    color: white;
+    transform: translateY(-50%) scale(1.1);
+  }
+
+  .prev-btn { left: -24px; }
+  .next-btn { right: -24px; }
+
+  /* Hide navigation on large screens (Desktop) where all items are visible */
+  @media (min-width: 1280px) {
+    .swiper-nav-btn {
+      display: none !important;
+    }
+  }
+
+  /* Breakpoints logic */
+  
+  /* Mobile (Default) */
+  .swiper-slide {
+    width: 85%; /* Peek effect */
+  }
+
+  /* Tablet (iPad Portrait & Landscape) */
+  @media (min-width: 640px) {
+    .swiper-slide {
+      width: auto; /* Let slidesPerView handle it */
+    }
+    
+    .about-card {
+        height: 100%; /* Force equal height */
+    }
+    
+    .card-content {
+        justify-content: flex-start; /* Align top */
+    }
+  }
+
+  @media (max-width: 1024px) {
+      .swiper-nav-btn {
+          width: 40px;
+          height: 40px;
+      }
+      .prev-btn { left: -10px; }
+      .next-btn { right: -10px; }
+  }
+
 </style>
 
 <script>
   import Swiper from 'swiper';
   import { Navigation, Pagination, Autoplay } from 'swiper/modules';
 
-  const swiper = new Swiper('.about-swiper', {
-    modules: [Navigation, Pagination, Autoplay],
-    loop: true,
-    spaceBetween: 24,
-    grabCursor: true,
-    centeredSlides: true, /* Center active slide */
-    slidesPerView: "auto", /* Allow peek */
-    autoplay: {
-      delay: 5000,
-      disableOnInteraction: false,
-    },
-    pagination: {
-      el: ".about-pagination",
-      type: "progressbar",
-      clickable: true,
-    },
-    navigation: {
-      nextEl: ".swiper-button-next",
-      prevEl: ".swiper-button-prev",
-    },
-    breakpoints: {
-      320: { slidesPerView: "auto", spaceBetween: 16, centeredSlides: true },
-      640: { slidesPerView: 2, spaceBetween: 24, centeredSlides: false },
-      1024: { slidesPerView: 3, spaceBetween: 32, centeredSlides: false },
-    },
-    on: {
-        init: function (swiper) {
-             // Custom arrows injection
-            const prev = swiper.navigation.prevEl;
-            const next = swiper.navigation.nextEl;
-            if(prev) prev.innerHTML = `<svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" /></svg>`;
-            if(next) next.innerHTML = `<svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" /></svg>`;
+  const initSwiper = () => {
+    new Swiper('.about-swiper', {
+      modules: [Navigation, Pagination, Autoplay],
+      loop: false, /* No loop for cleaner edge behavior on desktop */
+      spaceBetween: 20,
+      grabCursor: true,
+      observer: true, 
+      observeParents: true,
+      
+      // Default: Mobile View
+      slidesPerView: "auto",
+      centeredSlides: true,
+      
+      pagination: {
+        el: ".about-pagination",
+        type: "progressbar",
+      },
+      
+      navigation: {
+        nextEl: ".next-btn",
+        prevEl: ".prev-btn",
+      },
+
+      breakpoints: {
+        // Tablet (iPad Mini, iPad Air, etc)
+        640: {
+          slidesPerView: 2,
+          spaceBetween: 24,
+          centeredSlides: false, /* Left allow align */
+        },
+        // Desktop / iPad Pro Landscape
+        1024: {
+          slidesPerView: 3, 
+          spaceBetween: 32,
+          centeredSlides: false,
+        },
+        // Large Desktop
+        1280: {
+          slidesPerView: 4, /* Show all 4 if space permits, or 3.5 */
+          spaceBetween: 32,
+          centeredSlides: false,
         }
-    }
-  });
+      }
+    });
+  };
+
+  // Run on load
+  initSwiper();
+  
+  // Re-init on astro page swap if needed (view transitions)
+  document.addEventListener('astro:page-load', initSwiper);
 </script>

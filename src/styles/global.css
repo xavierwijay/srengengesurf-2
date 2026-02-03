@@ -96,7 +96,8 @@ body {
   font-family: "Poppins", sans-serif;
   line-height: 1.6;
   color: var(--text-dark);
-  background-color: var(--white);
+  background-color: #fdfbf7;
+  background-image: linear-gradient(to bottom, #fdfbf7 0%, #ffffff 100%);
   min-height: 100vh;
   margin: 0;
   max-width: 100vw;
@@ -708,7 +709,7 @@ h6 {
 
 /* About Section */
 .about {
-  background: linear-gradient(135deg, var(--secondary-color), #e5e7eb);
+  background: transparent;
   position: relative;
   overflow: visible;
 }
@@ -1255,7 +1256,7 @@ h6 {
 
 /* Gallery Section */
 .gallery {
-  background: linear-gradient(135deg, var(--white), var(--secondary-color));
+  background: transparent;
   position: relative;
   overflow: visible;
 }
@@ -2708,7 +2709,7 @@ h6 {
 
 /* Contact Section */
 .contact {
-  background: linear-gradient(135deg, var(--white), var(--secondary-color));
+  background: transparent;
   position: relative;
   overflow: hidden;
 }

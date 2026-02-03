@@ -181,6 +181,7 @@
     position: relative;
     padding: 80px 0;
     overflow: hidden;
+    background: linear-gradient(135deg, #fdfbf7 0%, #f4f1ea 100%); /* Elegant Warm Sand */
   }
 
   .reviews-title-image {
@@ -200,10 +201,21 @@
     padding: 20px 10px 40px !important; /* Space for shadow */
   }
 
+  .reviews-swiper .swiper-wrapper {
+    align-items: stretch;
+  }
+
+  .swiper-slide {
+    height: auto;
+    display: flex;
+    box-sizing: border-box;
+  }
+
   .review-card {
     background: #fff;
     border-radius: 20px;
     padding: 30px;
+    width: 100%;
     height: 100%;
     min-height: 320px;
     display: flex;
@@ -288,20 +300,27 @@
   .platform-badge {
     display: flex;
     align-items: center;
-    gap: 8px; /* Increased gap slightly */
-    opacity: 0.8; /* Slightly increased opacity */
+    gap: 8px; /* Increased gap */
+    opacity: 0.9;
+    flex-shrink: 0; /* Prevent shrinking */
+    background: #f8f9fa; /* Slight bg to define it */
+    padding: 6px 12px;
+    border-radius: 20px;
+    border: 1px solid #e5e7eb;
   }
 
   .platform-badge .google-logo {
-    width: 20px; 
-    height: 20px; 
+    width: 18px; 
+    height: 18px; 
+    flex-shrink: 0;
   }
 
   .platform-badge span {
     font-size: 0.8rem;
     font-weight: 600;
-    color: #555; /* Darker text for contrast */
+    color: #4b5563;
     white-space: nowrap; /* Prevent wrapping */
+    line-height: 1;
   }
 
   /* Navigation Buttons */
@@ -355,6 +374,12 @@
   }
 
   /* Responsive */
+  @media (max-width: 1024px) {
+    .reviews-slider-wrapper {
+      padding: 0 40px; /* Reduced side padding */
+    }
+  }
+
   @media (max-width: 768px) {
     .reviews-slider-wrapper { padding: 0; }
     .nav-btn { display: none; } /* Hide buttons on mobile, swipe is better */
@@ -368,24 +393,44 @@
   import 'swiper/css';
   import 'swiper/css/navigation';
 
-  new Swiper('.reviews-swiper', {
-    modules: [Navigation, Autoplay],
-    loop: true,
-    speed: 800,
-    spaceBetween: 24,
-    grabCursor: true,
-    autoplay: {
-      delay: 5000,
-      disableOnInteraction: false,
-    },
-    navigation: {
-      nextEl: ".next-btn",
-      prevEl: ".prev-btn",
-    },
-    breakpoints: {
-      0: { slidesPerView: 1, spaceBetween: 15 },
-      640: { slidesPerView: 2, spaceBetween: 20 },
-      1024: { slidesPerView: 3, spaceBetween: 24 },
-    }
-  });
+  const initSwiper = () => {
+    new Swiper('.reviews-swiper', {
+      modules: [Navigation, Autoplay],
+      loop: true,
+      speed: 800,
+      spaceBetween: 24,
+      grabCursor: true,
+      // Ensure all slides are equal height
+      autoHeight: false, 
+      autoplay: {
+        delay: 5000,
+        disableOnInteraction: false,
+      },
+      navigation: {
+        nextEl: ".next-btn",
+        prevEl: ".prev-btn",
+      },
+      breakpoints: {
+        // Mobile
+        0: { 
+          slidesPerView: 1, 
+          spaceBetween: 20 
+        },
+        // Tablet / iPad (Portrait)
+        640: { 
+          slidesPerView: 2, 
+          spaceBetween: 24,
+          centeredSlides: false /* Prevent misalignment */
+        },
+        // iPad Pro / Desktop
+        1024: { 
+          slidesPerView: 3, 
+          spaceBetween: 24 
+        },
+      }
+    });
+  };
+
+  initSwiper();
+  document.addEventListener('astro:page-load', initSwiper);
 </script>
