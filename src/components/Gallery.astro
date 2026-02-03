@@ -8,7 +8,7 @@
       alt="Decorative sticker"
       class="about-sticker about-sticker-5"
     />
-    <header class="section-header" data-aos="fade-up">
+    <header class="section-header">
       <img
         src="/img/title/PNGGALLERY.png"
         alt="Gallery"
@@ -19,208 +19,93 @@
       </p>
     </header>
 
-    <!-- Professional Gallery Container -->
     <div class="gallery-wrapper">
-      <!-- Mobile Gallery Layout -->
+      <!-- Mobile Gallery (Masonry Grid) -->
       <div class="gallery-mobile">
-        <!-- Mobile Main Photos (Always Visible) -->
-        <div class="mobile-gallery-main">
-          <div class="mobile-gallery-card featured">
-            <img
-              src="/img/gallery/g1.png"
-              alt="Surf Session"
-              class="gallery-img"
-              loading="lazy"
-              data-aos="fade-right"
-            />
-            <div class="mobile-overlay">
-              <h4>Epic Surf Session</h4>
-              <p>Perfect waves at Wediombo Beach</p>
-            </div>
+        <div class="m-masonry-grid" id="mobileGrid">
+          <!-- Column 1 -->
+          <div class="m-col">
+              <div class="m-card h-tall">
+                <img src="/img/gallery/g1.png" alt="Epic Surf" loading="lazy" />
+                 <div class="m-overlay-mini"><span>Highlight</span></div>
+              </div>
+              <div class="m-card h-short">
+                <img src="/img/mobile/m-g3.png" alt="Activities" loading="lazy" />
+              </div>
+              <!-- Hidden Items Col 1 -->
+              <div class="hidden-item m-card h-short">
+                 <img src="/img/mobile/m-g4.png" alt="Sunrise" loading="lazy" />
+              </div>
           </div>
 
-          <div class="mobile-gallery-card">
-            <img
-              src="/img/mobile/m-g2.png"
-              alt="Beach Food"
-              class="gallery-img"
-              loading="lazy"
-            />
-            <div class="mobile-overlay">
-              <h4>Local Cuisine</h4>
-              <p>Fresh seafood & Indonesian dishes</p>
-            </div>
-          </div>
-
-          <div class="mobile-gallery-card">
-            <img
-              src="/img/mobile/m-g3.png "
-              alt="Camp Activities"
-              class="gallery-img"
-              loading="lazy"
-            />
-            <div class="mobile-overlay">
-              <h4>Beach Activities</h4>
-              <p>Fun beyond surfing</p>
-            </div>
+          <!-- Column 2 -->
+          <div class="m-col">
+              <div class="m-card h-short">
+                <img src="/img/mobile/m-g2.png" alt="Food" loading="lazy" />
+              </div>
+              <div class="m-card h-tall">
+                 <img src="/img/gallery/g6.png" alt="Memories" loading="lazy" />
+              </div>
+               <!-- Hidden Items Col 2 -->
+              <div class="hidden-item m-card h-tall">
+                 <img src="/img/mobile/m-g5.png" alt="Training" loading="lazy" />
+              </div>
           </div>
         </div>
 
-        <!-- Mobile Hidden Photos -->
-        <div class="mobile-gallery-hidden">
-          <div class="mobile-gallery-card">
-            <img
-              src="/img/mobile/m-g1.png"
-              alt="Beach Memories"
-              class="gallery-img"
-              loading="lazy"
-            />
-            <div class="mobile-overlay">
-              <h4>Beautiful Memories</h4>
-              <p>Moments to remember</p>
-            </div>
-          </div>
-
-          <div class="mobile-gallery-card">
-            <img
-              src="/img/mobile/m-g4.png"
-              alt="Sunrise Surf"
-              class="gallery-img"
-              loading="lazy"
-            />
-            <div class="mobile-overlay">
-              <h4>Beautiful Sunrises</h4>
-              <p>Greatest moments captured</p>
-            </div>
-          </div>
-
-          <div class="mobile-gallery-card">
-            <img
-              src="/img/mobile/m-g5.png"
-              alt="Surf Training"
-              class="gallery-img"
-              loading="lazy"
-            />
-            <div class="mobile-overlay">
-              <h4>Surf Training</h4>
-              <p>Learn from the pros</p>
-            </div>
-          </div>
-        </div>
-
-        <!-- Mobile Expand Button -->
+        <!-- Clean Expand Button -->
         <div class="mobile-expand-section">
-          <button class="mobile-expand-btn" id="mobileExpandBtn" aria-expanded="false">
-            <span class="expand-text">Lihat Semua Foto</span>
-            <span class="collapse-text" style="display:none">Tutup</span>
-            <div class="expand-arrow">
-              <svg
-                width="20"
-                height="20"
-                viewBox="0 0 24 24"
-                fill="currentColor"
-              >
-                <path
-                  d="M7.41 8.84L12 13.42l4.59-4.58L18 10.25l-6 6-6-6z"
-                />
-              </svg>
-            </div>
+          <button class="expand-btn-text" id="mobileExpandBtn">
+            <span class="btn-text">Load More Photos</span>
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
           </button>
         </div>
       </div>
 
-      <!-- Desktop Gallery Layout -->
+  <!-- Desktop Gallery (Bento Layout) -->
       <div class="gallery-desktop">
-        <div class="desktop-gallery-grid">
-          <!-- Row 1 -->
-          <div class="desktop-card large">
-            <img
-              src="/img/gallery/g1.png"
-              alt="Epic Surf Session"
-              class="desktop-img"
-              loading="lazy"
-            />
-            <div class="desktop-overlay">
-              <div class="desktop-content">
-                <h3>Epic Surf Session</h3>
-                <p>Perfect waves and golden sunsets at Wediombo Beach</p>
-              </div>
+        <div class="bento-grid">
+          <!-- Main Large Feature (Left) -->
+          <div class="b-card b-main">
+            <img src="/img/gallery/g1.png" alt="Epic Surf" loading="lazy" />
+             <div class="b-overlay">
+                <div class="b-content">
+                    <h3>Epic Surf Session</h3>
+                    <p>Wediombo Beach</p>
+                </div>
             </div>
           </div>
 
-          <div class="desktop-card medium">
-            <img
-              src="/img/gallery/g2.png"
-              alt="Local Cuisine"
-              class="desktop-img"
-              loading="lazy"
-            />
-            <div class="desktop-overlay">
-              <div class="desktop-content">
-                <h4>Local Cuisine</h4>
-                <p>Fresh seafood & traditional Indonesian flavors</p>
-              </div>
+          <!-- Top Right 1 -->
+          <div class="b-card b-sub1">
+              <img src="/img/gallery/g6.png" alt="Memories" loading="lazy" />
+              <div class="b-overlay">
+                <div class="b-content">
+                    <h4>Memories</h4>
+                    <p>Good times</p>
+                </div>
             </div>
           </div>
 
-          <div class="desktop-card medium">
-            <img
-              src="/img/gallery/g3.png"
-              alt="Beach Activities"
-              class="desktop-img"
-              loading="lazy"
-            />
-            <div class="desktop-overlay">
-              <div class="desktop-content">
-                <h4>Beach Activities</h4>
-                <p>Adventure beyond surfing</p>
-              </div>
+          <!-- Top Right 2 -->
+          <div class="b-card b-sub2">
+              <img src="/img/gallery/g3.png" alt="Fun" loading="lazy" />
+               <div class="b-overlay">
+                <div class="b-content">
+                    <h4>Beach Fun</h4>
+                    <p>Activities</p>
+                </div>
             </div>
           </div>
 
-          <!-- Row 2 -->
-          <div class="desktop-card small">
-            <img
-              src="/img/gallery/g6.png"
-              alt="Beach Memories"
-              class="desktop-img"
-              loading="lazy"
-            />
-            <div class="desktop-overlay">
-              <div class="desktop-content">
-                <h4>Memories</h4>
-                <p>Unforgettable moments</p>
-              </div>
-            </div>
-          </div>
-
-          <div class="desktop-card wide">
-            <img
-              src="/img/gallery/g5.png"
-              alt="Sunrise Sessions"
-              class="desktop-img"
-              loading="lazy"
-            />
-            <div class="desktop-overlay">
-              <div class="desktop-content">
-                <h4>Beautiful Sunrise</h4>
-                <p>Greatest moments captured</p>
-              </div>
-            </div>
-          </div>
-
-          <div class="desktop-card small">
-            <img
-              src="/img/gallery/g4.png"
-              alt="Surf Training"
-              class="desktop-img"
-              loading="lazy"
-            />
-            <div class="desktop-overlay">
-              <div class="desktop-content">
-                <h4>Training</h4>
-                <p>Professional instruction</p>
-              </div>
+          <!-- Bottom Right Wide -->
+          <div class="b-card b-wide">
+               <img src="/img/gallery/g5.png" alt="Sunrise" loading="lazy" />
+               <div class="b-overlay">
+                <div class="b-content">
+                    <h4>Sunrise Session</h4>
+                    <p>Golden Hour</p>
+                </div>
             </div>
           </div>
         </div>
@@ -229,56 +114,217 @@
   </div>
 </section>
 
+<style>
+  /* Mobile Masonry Layout */
+  .gallery-mobile { display: flex; flex-direction: column; gap: 24px; }
+  
+  .m-masonry-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 12px;
+  }
+
+  .m-col {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+  }
+
+  .m-card {
+      position: relative;
+      border-radius: 12px;
+      overflow: hidden;
+      width: 100%;
+      background: #f0f0f0;
+      box-shadow: none; /* Cleaner look */
+  }
+
+  .m-card.h-short { height: 160px; }
+  .m-card.h-tall { height: 240px; }
+  
+  .m-card img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.5s ease;
+  }
+  
+  /* Subtle zoom on touch/hover */
+  .m-card:hover img {
+      transform: scale(1.03); 
+  }
+
+  /* Minimal Overlay for Key Shots */
+  .m-overlay-mini {
+      position: absolute;
+      bottom: 10px;
+      left: 10px;
+      background: rgba(0,0,0,0.6);
+      padding: 4px 10px;
+      border-radius: 20px;
+      backdrop-filter: blur(4px);
+  }
+  .m-overlay-mini span {
+      color: white;
+      font-size: 0.65rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+  }
+
+  /* Hidden Items Logic */
+  .hidden-item {
+      display: none; 
+      opacity: 0;
+      transition: opacity 0.4s ease;
+  }
+  
+  .hidden-item.show {
+      display: block;
+      opacity: 1;
+      animation: fadeIn 0.5s ease forwards;
+  }
+  
+  @keyframes fadeIn { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
+
+  /* Minimal Button */
+  .mobile-expand-section { display: flex; justify-content: center; margin-top: 8px; }
+  
+  .expand-btn-text {
+      background: rgba(255,255,255,0.8);
+      border: 1px solid #e0e0e0;
+      border-radius: 30px;
+      padding: 10px 24px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 0.85rem;
+      font-weight: 600;
+      color: #666;
+      cursor: pointer;
+      transition: all 0.2s ease;
+      backdrop-filter: blur(5px);
+  }
+  
+  .expand-btn-text:active {
+      background: #f5f5f5;
+      transform: scale(0.98);
+  }
+  
+  .expand-btn-text svg {
+      transition: transform 0.3s ease;
+      width: 16px; 
+      height: 16px;
+  }
+  
+  .expand-btn-text.expanded svg {
+      transform: rotate(180deg);
+  }
+  .expand-btn-text.expanded {
+      background: #333;
+      color: white;
+      border-color: #333;
+  }
+
+  /* Desktop Bento Grid - Modern & Professional */
+  .bento-grid {
+      display: grid;
+      grid-template-columns: 1.4fr 1fr 1fr;
+      grid-template-rows: 250px 250px;
+      gap: 20px;
+      max-width: 1100px;
+      margin: 0 auto;
+      grid-template-areas: 
+          "main sub1 sub2"
+          "main wide wide";
+  }
+
+  .b-card {
+      position: relative;
+      border-radius: 20px;
+      overflow: hidden;
+      cursor: pointer;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+  }
+
+  .b-main { grid-area: main; }
+  .b-sub1 { grid-area: sub1; }
+  .b-sub2 { grid-area: sub2; }
+  .b-wide { grid-area: wide; }
+
+  .b-card img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.6s cubic-bezier(0.2, 0.8, 0.2, 1);
+  }
+
+  .b-card:hover img {
+      transform: scale(1.05); /* Gentle zoom */
+  }
+
+  /* Professional Dark Overlay on Hover */
+  .b-overlay {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(to top, rgba(0,0,0,0.8) 0%, rgba(0,0,0,0) 60%);
+      opacity: 0;
+      transition: opacity 0.4s ease;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      padding: 24px;
+  }
+
+  .b-card:hover .b-overlay {
+      opacity: 1;
+  }
+
+  .b-content {
+      transform: translateY(10px);
+      transition: transform 0.4s ease;
+  }
+  
+  .b-card:hover .b-content {
+      transform: translateY(0);
+  }
+
+  .b-content h3 { font-size: 1.8rem; font-weight: 700; color: white; margin: 0 0 6px; }
+  .b-content h4 { font-size: 1.4rem; font-weight: 700; color: white; margin: 0 0 4px; }
+  .b-content p { font-size: 0.95rem; color: rgba(255,255,255,0.9); margin: 0; }
+
+  /* Responsive Display */
+  @media (min-width: 768px) {
+    .gallery-mobile { display: none; }
+  }
+  @media (max-width: 767px) {
+    .gallery-desktop { display: none; }
+  }
+</style>
+
 <script>
-  // Gallery Expand Logic
   const expandBtn = document.getElementById("mobileExpandBtn");
-  // Select hidden items properly - html has .mobile-gallery-hidden wrapping items? 
-  // Code in HTML shows .mobile-gallery-card inside .mobile-gallery-hidden.
-  // Script logic used .gallery-hidden.show which implies items had .gallery-hidden class. 
-  // But my HTML structure in Step 11 shows <div class="mobile-gallery-hidden"> containing cards.
-  // So I should target the wrapper or the children.
-  // I will target the wrapper to show it.
-  
-  const hiddenWrapper = document.querySelector(".mobile-gallery-hidden");
-  
-  const expandText = expandBtn?.querySelector(".expand-text") as HTMLElement;
-  const collapseText = expandBtn?.querySelector(".collapse-text") as HTMLElement;
-  const expandArrow = expandBtn?.querySelector(".expand-arrow svg") as HTMLElement;
+  const hiddenItems = document.querySelectorAll(".hidden-item");
+  const btnText = expandBtn?.querySelector(".btn-text");
 
-  if (expandBtn && hiddenWrapper) {
+  if (expandBtn && hiddenItems.length > 0) {
     expandBtn.addEventListener("click", () => {
-      const isExpanded = expandBtn.getAttribute("aria-expanded") === "true";
-
+      // Check if the first hidden item is currently visible
+      const isExpanded = hiddenItems[0].classList.contains("show");
+      
       if (!isExpanded) {
-        // Show
-        hiddenWrapper.classList.add("show"); // I need to ensure CSS supports this or add logic
-        // Original css probably had .mobile-gallery-hidden { display: none } and .show { display: block }
-        // Or similar. I'll check CSS later or assume simple display toggle.
-        // Actually, better to use style.display or custom class if I can't check CSS.
-        // I will assume global.css handles ".mobile-gallery-hidden.show" or similar.
-        // If not, I'll add inline style.
-        (hiddenWrapper as HTMLElement).style.display = "block";
-        (hiddenWrapper as HTMLElement).style.opacity = "0";
-        setTimeout(() => {
-            (hiddenWrapper as HTMLElement).style.opacity = "1";
-            (hiddenWrapper as HTMLElement).style.transition = "opacity 0.5s ease";
-        }, 10);
-
-        expandBtn.setAttribute("aria-expanded", "true");
-        if (expandText) expandText.style.display = "none";
-        if (collapseText) collapseText.style.display = "inline";
-        if (expandArrow) expandArrow.style.transform = "rotate(180deg)";
-        
+        // Expand: Show all hidden items
+        hiddenItems.forEach(item => item.classList.add("show"));
+        expandBtn.classList.add("expanded");
+        if(btnText) btnText.textContent = "Close Gallery";
       } else {
-        // Hide
-        (hiddenWrapper as HTMLElement).style.display = "none";
-        expandBtn.setAttribute("aria-expanded", "false");
-        if (expandText) expandText.style.display = "inline";
-        if (collapseText) collapseText.style.display = "none";
-        if (expandArrow) expandArrow.style.transform = "rotate(0deg)";
+        // Collapse: Hide all hidden items
+        hiddenItems.forEach(item => item.classList.remove("show"));
+        expandBtn.classList.remove("expanded");
+        if(btnText) btnText.textContent = "Load More Photos";
         
-        // Scroll back
-        document.getElementById("gallery")?.scrollIntoView({ behavior: "smooth" });
+        // Scroll back to gallery top
+        document.getElementById("gallery")?.scrollIntoView({ behavior: 'smooth' });
       }
     });
   }

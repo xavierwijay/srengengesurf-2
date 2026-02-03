@@ -1,186 +1,391 @@
 ---
 ---
 
-<section class="section about" id="review" role="region" aria-labelledby="review-title">
+<section class="section reviews" id="review">
   <div class="container">
-    <header class="section-header" data-aos="fade-up">
-      <img id="review-title" class="reviews-title-image" src="/img/title/PNGREVIEW.png" alt="Reviews" />
+    <header class="section-header">
+      <img
+        src="/img/title/PNGREVIEW.png"
+        alt="Reviews"
+        class="reviews-title-image"
+      />
       <p class="section-subtitle">What our guests say about their experience</p>
     </header>
 
-    <!-- Google Reviews Swiper -->
-    <div class="reviews-swiper-container" data-aos="fade-up" data-aos-delay="100">
+    <div class="reviews-slider-wrapper">
       <div class="swiper reviews-swiper">
         <div class="swiper-wrapper">
           <!-- Review 1 -->
           <div class="swiper-slide">
-            <div class="review-card" data-aos="fade-up" data-aos-delay="150">
-              <div class="review-header">
-                <div class="reviewer-info">
-                  <div class="reviewer-avatar">
+            <div class="review-card">
+              <div class="card-header">
+                <div class="reviewer-avatar">
                    <img src="/img/usersvgg.png" alt="Natan" />
-                  </div>
-                  <div class="reviewer-details">
-                    <h4 class="reviewer-name">Natan</h4>
-                  </div>
                 </div>
-                <div class="review-date">seminggu lalu</div>
-              </div>
-              <div class="review-content">
-                <p>"Salah satu surf trip di Jogja yang harganya terjangkau. Beneran diajarin cara main surfing dan muter-muter pantai Wediombo!! Jujur makanan disana enak-enak, jadi ga usah pusing soal makanan. Sampai sekarang masih blm move on sama Srengenge trip ☀️..."</p>
-              </div>
-              <div class="review-rating">
-                <div class="review-stars">
-                  <span class="star">⭐</span><span class="star">⭐</span><span class="star">⭐</span><span class="star">⭐</span><span class="star">⭐</span>
+                <div class="reviewer-meta">
+                  <h4 class="reviewer-name">Natan</h4>
+                  <span class="review-date">Seminggu lalu</span>
                 </div>
               </div>
-              <div class="review-source">
-                <img src="/img/google-icon.png" alt="Google" class="source-icon" />
-                <span class="source-text">Google Review</span>
+              
+              <div class="review-body">
+                <p>"Salah satu surf trip di Jogja yang harganya terjangkau. Beneran diajarin cara main surfing dan muter-muter pantai Wediombo!! Jujur makanan disana enak-enak... Srengenge trip ☀️..."</p>
+              </div>
+
+              <div class="card-footer">
+                 <div class="stars">
+                    ★★★★★
+                 </div>
+   <!-- Platform Badge with SVG -->
+                 <div class="platform-badge">
+                    <svg class="google-logo" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48">
+                      <path fill="#EA4335" d="M24 9.5c3.54 0 6.71 1.22 9.21 3.6l6.85-6.85C35.9 2.38 30.47 0 24 0 14.62 0 6.51 5.38 2.56 13.22l7.98 6.19C12.43 13.72 17.74 9.5 24 9.5z"/>
+                      <path fill="#4285F4" d="M46.98 24.55c0-1.57-.15-3.09-.38-4.55H24v9.02h12.94c-.58 2.96-2.26 5.48-4.78 7.18l7.73 6c4.51-4.18 7.09-10.36 7.09-17.65z"/>
+                      <path fill="#FBBC05" d="M10.53 28.59c-.48-1.45-.76-2.99-.76-4.59s.27-3.14.76-4.59l-7.98-6.19C.92 16.46 0 20.12 0 24c0 3.88.92 7.54 2.56 10.78l7.97-6.19z"/>
+                      <path fill="#34A853" d="M24 48c6.48 0 11.93-2.13 15.89-5.81l-7.73-6c-2.15 1.45-4.92 2.3-8.16 2.3-6.26 0-11.57-4.22-13.47-9.91l-7.98 6.19C6.51 42.62 14.62 48 24 48z"/>
+                    </svg>
+                    <span>Google Review</span>
+                 </div>
               </div>
             </div>
           </div>
 
           <!-- Review 2 -->
           <div class="swiper-slide">
-            <div class="review-card" data-aos="fade-up" data-aos-delay="200">
-              <div class="review-header">
-                <div class="reviewer-info">
-                  <div class="reviewer-avatar">
-                    <img src="/img/usersvgg.png" alt="Rafli Ramadhan" />
-                  </div>
-                  <div class="reviewer-details">
-                    <h4 class="reviewer-name">Rafli Ramadhan</h4>
-                  </div>
+            <div class="review-card">
+              <div class="card-header">
+                <div class="reviewer-avatar">
+                   <img src="/img/usersvgg.png" alt="Rafli" />
                 </div>
-                <div class="review-date">seminggu lalu</div>
+                <div class="reviewer-meta">
+                  <h4 class="reviewer-name">Rafli Ramadhan</h4>
+                  <span class="review-date">Seminggu lalu</span>
+                </div>
               </div>
-              <div class="review-content">
-                <p>"GOKILLL!!! Ga nyangka ada tempat surfing yg deket dari Jogja, aku pikir harus ke Bali ato Lombok dulu... Srengenge surf trip seru bangett!!! Mas sama mbak pengelolanya juga asik-asik semua, bakalan balik lagi klo ada kesempatan 😄👍👍"</p>
+
+              <div class="review-body">
+                <p>"GOKILLL!!! Ga nyangka ada tempat surfing yg deket dari Jogja... Srengenge surf trip seru bangett!!! Mas sama mbak pengelolanya juga asik-asik semua 😄👍👍"</p>
               </div>
-              <div class="review-rating">
-                <div class="review-stars"><span class="star">⭐</span><span class="star">⭐</span><span class="star">⭐</span><span class="star">⭐</span><span class="star">⭐</span></div>
-              </div>
-               <div class="review-source">
-                <img src="/img/google-icon.png" alt="Google" class="source-icon" />
-                <span class="source-text">Google Review</span>
+
+               <div class="card-footer">
+                 <div class="stars">
+                    ★★★★★
+                 </div>
+   <!-- Platform Badge with SVG -->
+                 <div class="platform-badge">
+                    <svg class="google-logo" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48">
+                      <path fill="#EA4335" d="M24 9.5c3.54 0 6.71 1.22 9.21 3.6l6.85-6.85C35.9 2.38 30.47 0 24 0 14.62 0 6.51 5.38 2.56 13.22l7.98 6.19C12.43 13.72 17.74 9.5 24 9.5z"/>
+                      <path fill="#4285F4" d="M46.98 24.55c0-1.57-.15-3.09-.38-4.55H24v9.02h12.94c-.58 2.96-2.26 5.48-4.78 7.18l7.73 6c4.51-4.18 7.09-10.36 7.09-17.65z"/>
+                      <path fill="#FBBC05" d="M10.53 28.59c-.48-1.45-.76-2.99-.76-4.59s.27-3.14.76-4.59l-7.98-6.19C.92 16.46 0 20.12 0 24c0 3.88.92 7.54 2.56 10.78l7.97-6.19z"/>
+                      <path fill="#34A853" d="M24 48c6.48 0 11.93-2.13 15.89-5.81l-7.73-6c-2.15 1.45-4.92 2.3-8.16 2.3-6.26 0-11.57-4.22-13.47-9.91l-7.98 6.19C6.51 42.62 14.62 48 24 48z"/>
+                    </svg>
+                    <span>Google Review</span>
+                 </div>
               </div>
             </div>
           </div>
 
           <!-- Review 3 -->
            <div class="swiper-slide">
-            <div class="review-card" data-aos="fade-up" data-aos-delay="250">
-              <div class="review-header">
-                <div class="reviewer-info">
-                  <div class="reviewer-avatar">
-                   <img src="/img/usersvgg.png" alt="Farhan Faiq" />
-                  </div>
-                  <div class="reviewer-details">
-                    <h4 class="reviewer-name">Farhan Faiq</h4>
-                  </div>
+            <div class="review-card">
+              <div class="card-header">
+                <div class="reviewer-avatar">
+                   <img src="/img/usersvgg.png" alt="Farhan" />
                 </div>
-                 <div class="review-date">seminggu lalu</div>
+                <div class="reviewer-meta">
+                  <h4 class="reviewer-name">Farhan Faiq</h4>
+                  <span class="review-date">Seminggu lalu</span>
+                </div>
               </div>
-              <div class="review-content">
-                <p>"A VERY FUN TRIP, I LOVE BEACHES, I LOVE SUN, AND I LOVE YOU GUYS. THIS IS NOT AN EXAGGERATION, BUT YOU NEED TO GET ALONG WITH THIS TRIP AT LEAST ONCE IN YOUR LIFETIME. UNFORGETTABLE EXPERIENCE 😍😍😍..."</p>
+
+              <div class="review-body">
+                <p>"A VERY FUN TRIP, I LOVE BEACHES... THIS IS NOT AN EXAGGERATION, BUT YOU NEED TO GET ALONG WITH THIS TRIP AT LEAST ONCE IN YOUR LIFETIME. UNFORGETTABLE EXPERIENCE 😍😍😍..."</p>
               </div>
-              <div class="review-rating">
-                  <div class="review-stars"><span class="star">⭐</span><span class="star">⭐</span><span class="star">⭐</span><span class="star">⭐</span><span class="star">⭐</span></div>
-              </div>
-              <div class="review-source">
-                <img src="/img/google-icon.png" alt="Google" class="source-icon" />
-                <span class="source-text">Google Review</span>
+
+               <div class="card-footer">
+                 <div class="stars">
+                    ★★★★★
+                 </div>
+   <!-- Platform Badge with SVG -->
+                 <div class="platform-badge">
+                    <svg class="google-logo" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48">
+                      <path fill="#EA4335" d="M24 9.5c3.54 0 6.71 1.22 9.21 3.6l6.85-6.85C35.9 2.38 30.47 0 24 0 14.62 0 6.51 5.38 2.56 13.22l7.98 6.19C12.43 13.72 17.74 9.5 24 9.5z"/>
+                      <path fill="#4285F4" d="M46.98 24.55c0-1.57-.15-3.09-.38-4.55H24v9.02h12.94c-.58 2.96-2.26 5.48-4.78 7.18l7.73 6c4.51-4.18 7.09-10.36 7.09-17.65z"/>
+                      <path fill="#FBBC05" d="M10.53 28.59c-.48-1.45-.76-2.99-.76-4.59s.27-3.14.76-4.59l-7.98-6.19C.92 16.46 0 20.12 0 24c0 3.88.92 7.54 2.56 10.78l7.97-6.19z"/>
+                      <path fill="#34A853" d="M24 48c6.48 0 11.93-2.13 15.89-5.81l-7.73-6c-2.15 1.45-4.92 2.3-8.16 2.3-6.26 0-11.57-4.22-13.47-9.91l-7.98 6.19C6.51 42.62 14.62 48 24 48z"/>
+                    </svg>
+                    <span>Google Review</span>
+                 </div>
               </div>
             </div>
           </div>
 
           <!-- Review 4 -->
           <div class="swiper-slide">
-            <div class="review-card" data-aos="fade-up" data-aos-delay="300">
-               <div class="review-header">
-                <div class="reviewer-info">
-                  <div class="reviewer-avatar">
-                     <img src="/img/usersvgg.png" alt="Etza Fadila" />
-                  </div>
-                  <div class="reviewer-details">
-                    <h4 class="reviewer-name">Etza Fadila</h4>
-                  </div>
+             <div class="review-card">
+              <div class="card-header">
+                <div class="reviewer-avatar">
+                   <img src="/img/usersvgg.png" alt="Etza" />
                 </div>
-                 <div class="review-date">5 hari lalu</div>
+                <div class="reviewer-meta">
+                  <h4 class="reviewer-name">Etza Fadila</h4>
+                  <span class="review-date">5 hari lalu</span>
+                </div>
               </div>
-               <div class="review-content">
-                <p>"Menobatkan Srengenge sebagai trip terbaik!! 🫶 Berkesan dan membekas, dibentuk dari hati, dan sampai ke hati kami semua sampai pulang. Tempat terbaik untuk belajar surfing pertama, sangat hangat dan terbuka. Semoga bisa kembali lagii, Srengenge ✨"</p>
+
+              <div class="review-body">
+                <p>"Menobatkan Srengenge sebagai trip terbaik!! 🫶 Berkesan dan membekas, dibentuk dari hati... Tempat terbaik untuk belajar surfing pertama. Semoga bisa kembali lagii ✨"</p>
               </div>
-              <div class="review-rating">
-                 <div class="review-stars"><span class="star">⭐</span><span class="star">⭐</span><span class="star">⭐</span><span class="star">⭐</span><span class="star">⭐</span></div>
-              </div>
-              <div class="review-source">
-                <img src="/img/google-icon.png" alt="Google" class="source-icon" />
-                <span class="source-text">Google Review</span>
+
+               <div class="card-footer">
+                 <div class="stars">
+                    ★★★★★
+                 </div>
+   <!-- Platform Badge with SVG -->
+                 <div class="platform-badge">
+                    <svg class="google-logo" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48">
+                      <path fill="#EA4335" d="M24 9.5c3.54 0 6.71 1.22 9.21 3.6l6.85-6.85C35.9 2.38 30.47 0 24 0 14.62 0 6.51 5.38 2.56 13.22l7.98 6.19C12.43 13.72 17.74 9.5 24 9.5z"/>
+                      <path fill="#4285F4" d="M46.98 24.55c0-1.57-.15-3.09-.38-4.55H24v9.02h12.94c-.58 2.96-2.26 5.48-4.78 7.18l7.73 6c4.51-4.18 7.09-10.36 7.09-17.65z"/>
+                      <path fill="#FBBC05" d="M10.53 28.59c-.48-1.45-.76-2.99-.76-4.59s.27-3.14.76-4.59l-7.98-6.19C.92 16.46 0 20.12 0 24c0 3.88.92 7.54 2.56 10.78l7.97-6.19z"/>
+                      <path fill="#34A853" d="M24 48c6.48 0 11.93-2.13 15.89-5.81l-7.73-6c-2.15 1.45-4.92 2.3-8.16 2.3-6.26 0-11.57-4.22-13.47-9.91l-7.98 6.19C6.51 42.62 14.62 48 24 48z"/>
+                    </svg>
+                    <span>Google Review</span>
+                 </div>
               </div>
             </div>
           </div>
 
         </div>
-
-         <!-- Swiper Navigation -->
-         <button class="swiper-button-prev swiper-nav-button" aria-label="Previous review"></button>
-         <button class="swiper-button-next swiper-nav-button" aria-label="Next review"></button>
       </div>
       
-      <!-- Pagination -->
-      <div class="swiper-pagination-container" data-aos="fade-up" data-aos-delay="200">
-        <div class="swiper-pagination reviews-pagination"></div>
-      </div>
-    
+      <!-- Custom Navigation Buttons -->
+      <button class="nav-btn prev-btn" aria-label="Previous">
+        <svg fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M15 19l-7-7 7-7" /></svg>
+      </button>
+      <button class="nav-btn next-btn" aria-label="Next">
+        <svg fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M9 5l7 7-7 7" /></svg>
+      </button>
     </div>
 
     <!-- Review CTA -->
-    <div class="review-cta" data-aos="fade-up" data-aos-delay="300">
-      <a href="https://maps.app.goo.gl/RposW3mdifXBTzjD8" target="_blank" rel="noopener noreferrer" class="btn btn-outline">
-        <img src="/img/google-icon.png" alt="Google" class="btn-icon" />
-        View All Google Reviews
+    <div class="review-cta">
+      <a href="https://maps.app.goo.gl/RposW3mdifXBTzjD8" target="_blank" rel="noopener noreferrer" class="cta-button">
+        See All Reviews on Google Maps
       </a>
     </div>
   </div>
 </section>
 
+<style>
+  .reviews {
+    position: relative;
+    padding: 80px 0;
+    overflow: hidden;
+  }
+
+  .reviews-title-image {
+    max-width: 250px;
+    margin: 0 auto 10px;
+    display: block;
+  }
+
+  .reviews-slider-wrapper {
+    position: relative;
+    max-width: 1200px;
+    margin: 40px auto;
+    padding: 0 50px; /* Space for buttons */
+  }
+
+  .reviews-swiper {
+    padding: 20px 10px 40px !important; /* Space for shadow */
+  }
+
+  .review-card {
+    background: #fff;
+    border-radius: 20px;
+    padding: 30px;
+    height: 100%;
+    min-height: 320px;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.05); /* Soft professional shadow */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: 1px solid rgba(0,0,0,0.03);
+  }
+
+  .review-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 40px rgba(0,0,0,0.08);
+  }
+
+  .card-header {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 20px;
+  }
+
+  .reviewer-avatar {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    overflow: hidden;
+    background: #f0f0f0;
+  }
+  
+  .reviewer-avatar img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .reviewer-meta {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .reviewer-name {
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: #333;
+    margin: 0;
+    line-height: 1.2;
+  }
+
+  .review-date {
+    font-size: 0.85rem;
+    color: #999;
+    margin-top: 2px;
+  }
+
+  .review-body {
+    flex-grow: 1;
+    margin-bottom: 25px;
+  }
+
+  .review-body p {
+    font-size: 0.95rem;
+    line-height: 1.6;
+    color: #555;
+    font-style: italic;
+    margin: 0;
+  }
+
+  .card-footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-top: 1px solid #f0f0f0;
+    padding-top: 15px;
+  }
+
+  .stars {
+    color: #FFC107; /* Material Amber */
+    font-size: 1.1rem;
+    letter-spacing: 2px;
+  }
+
+  .platform-badge {
+    display: flex;
+    align-items: center;
+    gap: 8px; /* Increased gap slightly */
+    opacity: 0.8; /* Slightly increased opacity */
+  }
+
+  .platform-badge .google-logo {
+    width: 20px; 
+    height: 20px; 
+  }
+
+  .platform-badge span {
+    font-size: 0.8rem;
+    font-weight: 600;
+    color: #555; /* Darker text for contrast */
+    white-space: nowrap; /* Prevent wrapping */
+  }
+
+  /* Navigation Buttons */
+  .nav-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    background: #fff;
+    border: none;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    cursor: pointer;
+    z-index: 10;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #FF9F43;
+    transition: all 0.2s ease;
+  }
+
+  .nav-btn:hover {
+    background: #FF9F43;
+    color: white;
+    transform: translateY(-50%) scale(1.1);
+  }
+
+  .prev-btn { left: 0; }
+  .next-btn { right: 0; }
+
+  .nav-btn svg { width: 20px; height: 20px; }
+
+  /* CTA */
+  .review-cta {
+    text-align: center;
+    margin-top: 20px;
+  }
+
+  .cta-button {
+    display: inline-block;
+    color: #888;
+    text-decoration: underline;
+    font-weight: 500;
+    font-size: 0.95rem;
+    transition: color 0.2s;
+  }
+  
+  .cta-button:hover {
+    color: #FF9F43;
+  }
+
+  /* Responsive */
+  @media (max-width: 768px) {
+    .reviews-slider-wrapper { padding: 0; }
+    .nav-btn { display: none; } /* Hide buttons on mobile, swipe is better */
+    .reviews-swiper { padding: 10px 20px 40px !important; }
+  }
+</style>
+
 <script>
   import Swiper from 'swiper';
-  import { Navigation, Pagination, Autoplay } from 'swiper/modules';
+  import { Navigation, Autoplay } from 'swiper/modules';
+  import 'swiper/css';
+  import 'swiper/css/navigation';
 
   new Swiper('.reviews-swiper', {
-    modules: [Navigation, Pagination, Autoplay],
+    modules: [Navigation, Autoplay],
     loop: true,
+    speed: 800,
     spaceBetween: 24,
     grabCursor: true,
     autoplay: {
       delay: 5000,
       disableOnInteraction: false,
     },
-    pagination: {
-      el: ".reviews-pagination",
-      type: "progressbar",
-      clickable: true,
-    },
     navigation: {
-      nextEl: ".swiper-button-next",
-      prevEl: ".swiper-button-prev",
+      nextEl: ".next-btn",
+      prevEl: ".prev-btn",
     },
     breakpoints: {
-      320: { slidesPerView: 1, spaceBetween: 10 },
-      640: { slidesPerView: 1, spaceBetween: 16 },
-      768: { slidesPerView: 2, spaceBetween: 20 },
+      0: { slidesPerView: 1, spaceBetween: 15 },
+      640: { slidesPerView: 2, spaceBetween: 20 },
       1024: { slidesPerView: 3, spaceBetween: 24 },
-    },
-     on: {
-        init: function (swiper) {
-            const prev = swiper.navigation.prevEl;
-            const next = swiper.navigation.nextEl;
-            if(prev) prev.innerHTML = `<svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" /></svg>`;
-            if(next) next.innerHTML = `<svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" /></svg>`;
-        }
     }
   });
 </script>

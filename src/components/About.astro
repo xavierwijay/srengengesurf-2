@@ -79,6 +79,25 @@
   </div>
 </section>
 
+<style>
+  /* Base - Match Packages style for mobile card width */
+  @media (max-width: 639px) {
+    .swiper-slide {
+        width: 85% !important;
+        display: flex;
+        justify-content: center;
+    }
+    .card {
+        width: 100%;
+    }
+  }
+  /* Ensure visible overflow for shadows if needed, though about cards usually flat or contained */
+  .about-swiper {
+      padding: 20px 0; /* Add padding for shadow/scale effects if any */
+      overflow: visible !important;
+  }
+</style>
+
 <script>
   import Swiper from 'swiper';
   import { Navigation, Pagination, Autoplay } from 'swiper/modules';
@@ -88,6 +107,8 @@
     loop: true,
     spaceBetween: 24,
     grabCursor: true,
+    centeredSlides: true, /* Center active slide */
+    slidesPerView: "auto", /* Allow peek */
     autoplay: {
       delay: 5000,
       disableOnInteraction: false,
@@ -102,10 +123,9 @@
       prevEl: ".swiper-button-prev",
     },
     breakpoints: {
-      320: { slidesPerView: 1, spaceBetween: 10 },
-      640: { slidesPerView: 1, spaceBetween: 16 },
-      768: { slidesPerView: 2, spaceBetween: 24 },
-      1024: { slidesPerView: 3, spaceBetween: 32 },
+      320: { slidesPerView: "auto", spaceBetween: 16, centeredSlides: true },
+      640: { slidesPerView: 2, spaceBetween: 24, centeredSlides: false },
+      1024: { slidesPerView: 3, spaceBetween: 32, centeredSlides: false },
     },
     on: {
         init: function (swiper) {

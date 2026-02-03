@@ -8,7 +8,7 @@
   aria-labelledby="packages-title"
 >
   <div class="container">
-    <header class="section-header" data-aos="fade-up">
+    <header class="section-header">
       <img
         id="packages-title"
         class="packages-title-image"
@@ -20,22 +20,18 @@
       </p>
     </header>
 
-    <div
-      class="packages-swiper-container"
-      data-aos="fade-up"
-      data-aos-delay="100"
-    >
+    <div class="packages-swiper-container">
       <div class="swiper packages-swiper">
         <div class="swiper-wrapper">
           <!-- Pkg 1 -->
           <div class="swiper-slide">
-            <div class="pkg-card" data-id="1" data-base-price="800000">
+            <div class="pkg-card" data-id="1" data-base-price="750000">
               <div class="pkg-header">
                 <span class="pkg-tag">Best Value</span>
                 <h3 class="pkg-title">Surf & Camp</h3>
                 <div class="pkg-price-box">
                   <span class="currency">Rp</span>
-                  <span class="amount">800K</span>
+                  <span class="amount">750K</span>
                   <span class="duration">/ 2D1N</span>
                 </div>
               </div>
@@ -85,7 +81,71 @@
                   <!-- Total -->
                   <div class="pax-total-box">
                     <span class="label">Total Price</span>
-                    <span class="value pax-total">Rp 800K</span>
+                    <span class="value pax-total">Rp 750K</span>
+                  </div>
+
+                  <a href="#" class="btn btn-primary book-btn">Book Now</a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Pkg 5 (New) -->
+          <div class="swiper-slide">
+            <div class="pkg-card" data-id="5" data-base-price="750000">
+              <div class="pkg-header">
+                <h3 class="pkg-title">Sore di desa, Pagi di ombak</h3>
+                <div class="pkg-price-box">
+                  <span class="currency">Rp</span>
+                  <span class="amount">750K</span>
+                  <span class="duration">/ 2D1N</span>
+                </div>
+              </div>
+              <div class="pkg-body">
+                <ul class="pkg-features">
+                  <li>
+                    <span class="icon">🏄‍♂️</span>
+                    <span class="text">Basic surfing lessons</span>
+                  </li>
+                  <li>
+                    <span class="icon">🏡</span>
+                    <span class="text">Village homestay</span>
+                  </li>
+                  <li>
+                    <span class="icon">🍽️</span>
+                    <span class="text">3 meals</span>
+                  </li>
+                  <li>
+                    <span class="icon">🏖️</span>
+                    <span class="text">Beach access</span>
+                  </li>
+                  <li>
+                    <span class="icon">📸</span>
+                    <span class="text">Photo documentation</span>
+                  </li>
+                  <li>
+                    <span class="icon">🚐</span>
+                    <span class="text">Transport</span>
+                  </li>
+                  <li>
+                    <span class="icon">🌅</span>
+                    <span class="text">Village cultural experience</span>
+                  </li>
+                </ul>
+
+                <div class="pkg-footer">
+                  <div class="pax-control-wrapper">
+                    <span class="pax-label">Pax</span>
+                    <div class="pax-controls">
+                      <button class="pax-btn decrease">-</button>
+                      <span class="pax-number">1</span>
+                      <button class="pax-btn increase">+</button>
+                    </div>
+                  </div>
+
+                  <div class="pax-total-box">
+                    <span class="label">Total Price</span>
+                    <span class="value pax-total">Rp 750K</span>
                   </div>
 
                   <a href="#" class="btn btn-primary book-btn">Book Now</a>
@@ -271,11 +331,7 @@
           class="swiper-button-next swiper-nav-button"
           aria-label="Next package"></button>
       </div>
-      <div
-        class="swiper-pagination-container"
-        data-aos="fade-up"
-        data-aos-delay="200"
-      >
+      <div class="swiper-pagination-container">
         <div class="swiper-pagination packages-pagination"></div>
       </div>
     </div>
@@ -321,12 +377,14 @@
     }
   }
 
-  /* Active State for Mobile (Scaled up) */
-  :global(.swiper-slide-active .pkg-card) {
-    transform: scale(1.02);
-    box-shadow: 0 20px 40px rgba(237, 154, 85, 0.15);
-    border-color: rgba(237, 154, 85, 0.2);
-    z-index: 2;
+  /* Active State for Mobile only (Scaled up) */
+  @media (max-width: 767px) {
+    :global(.swiper-slide-active .pkg-card) {
+      transform: scale(1.02);
+      box-shadow: 0 20px 40px rgba(237, 154, 85, 0.15);
+      border-color: rgba(237, 154, 85, 0.2);
+      z-index: 2;
+    }
   }
   
   /* Card Design */
@@ -345,10 +403,11 @@
     z-index: 1;
   }
   
+  /* Desktop Hover - Toned down */
   @media(min-width: 1024px) {
     .pkg-card:hover {
-        transform: translateY(-8px);
-        box-shadow: 0 20px 40px rgba(237, 154, 85, 0.15);
+        transform: translateY(-4px);
+        box-shadow: 0 15px 30px rgba(237, 154, 85, 0.1);
     }
   }
 
@@ -361,6 +420,11 @@
     position: relative;
     border-bottom-left-radius: 50% 20px;
     border-bottom-right-radius: 50% 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    /* Ensure header takes enough space for 2-line titles to align others */
+    min-height: 180px; 
   }
 
   .intensive-package .pkg-header {
@@ -384,8 +448,18 @@
   .pkg-title {
     font-size: 1.5rem;
     font-weight: 800;
-    margin: 0 0 8px;
+    margin: 0 0 12px;
     text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    /* Enforce 2-line height for consistency */
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    line-height: 1.2;
+    min-height: 3.6rem; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
 
   .pkg-price-box {
@@ -435,7 +509,7 @@
     slidesPerView: "auto",
     centeredSlides: true,
     spaceBetween: 20,
-    centeredSlidesBounds: true, // Prevents gap at start/end
+    // centeredSlidesBounds removed to ensure first slide is centered
     
     pagination: {
       el: ".packages-pagination",
@@ -474,7 +548,8 @@
 
   // PAX Logic
   const packages = {
-    1: { name: "Surf & Camp", price: 800000 },
+    1: { name: "Surf & Camp", price: 750000 },
+    5: { name: "Sore di desa, Pagi di ombak", price: 750000 },
     2: { name: "One Day Trip", price: 350000 },
     3: { name: "Surf Only", price: 250000 },
   };
