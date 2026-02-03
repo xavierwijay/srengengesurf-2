@@ -22,6 +22,8 @@ const {
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0" />
 		<link rel="icon" type="image/png" href="/img/srngengelogoo.png" />
+		<link rel="sitemap" href="/sitemap-index.xml" />
+		<link rel="canonical" href={new URL(Astro.url.pathname, Astro.site)} />
 		
         <!-- SEO & Meta -->
         <meta name="description" content={description} />
@@ -41,14 +43,14 @@ const {
         
         <!-- Open Graph -->
         <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://srengenge.com/" />
+        <meta property="og:url" content={new URL(Astro.url.pathname, Astro.site)} />
         <meta property="og:title" content="Srengenge Surf Camp - Pantai Wediombo Yogyakarta" />
         <meta property="og:description" content="Surf camp authentic di Pantai Wediombo dengan genuine connection, spot ramah pemula, dan kecintaan terhadap laut. Gabung surf trip memorable bersama kami!" />
         <meta property="og:image" content="/img/hero1.png" />
 
         <!-- Twitter -->
         <meta property="twitter:card" content="summary_large_image" />
-        <meta property="twitter:url" content="https://srengenge.com/" />
+        <meta property="twitter:url" content="https://srengengetrip.online/" />
         <meta property="twitter:title" content="Srengenge Surf Camp - Pantai Wediombo Yogyakarta" />
         <meta property="twitter:description" content="Surf camp authentic di Pantai Wediombo dengan genuine connection, spot ramah pemula, dan kecintaan terhadap laut." />
         <meta property="twitter:image" content="/img/hero1.png" />
@@ -59,6 +61,33 @@ const {
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
         <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+		<!-- Schema.org JSON-LD -->
+		<script type="application/ld+json">
+		{
+		  "@context": "https://schema.org",
+		  "@type": "Resort",
+		  "name": "Srengenge Surf Camp",
+		  "image": "https://srengengetrip.online/img/hero1.png",
+		  "description": "Surf camp authentic di Pantai Wediombo dengan genuine connection, spot ramah pemula, dan kecintaan terhadap laut.",
+		  "address": {
+			"@type": "PostalAddress",
+			"streetAddress": "Pantai Wediombo, Jepitu",
+			"addressLocality": "Girisubo",
+			"addressRegion": "Gunung Kidul, Yogyakarta",
+			"postalCode": "55883",
+			"addressCountry": "ID"
+		  },
+		  "geo": {
+			"@type": "GeoCoordinates",
+			"latitude": -8.153508,
+			"longitude": 110.706540
+		  },
+		  "url": "https://srengengetrip.online",
+		  "telephone": "+6285183001691", 
+		  "priceRange": "$$"
+		}
+		</script>
 
         <script is:inline>
             // Initialize AOS

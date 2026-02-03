@@ -9,6 +9,7 @@
     "astro": "astro"
   },
   "dependencies": {
+    "@astrojs/sitemap": "^3.7.0",
     "aos": "^2.3.4",
     "astro": "^5.17.1",
     "swiper": "^12.1.0"
