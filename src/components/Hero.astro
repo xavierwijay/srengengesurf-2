@@ -2,19 +2,6 @@
 ---
 
 <section class="hero" id="hero" role="banner">
-  <!-- SEO H1 - Hidden but accessible -->
-  <h1
-    style="
-      position: absolute;
-      left: -9999px;
-      width: 1px;
-      height: 1px;
-      overflow: hidden;
-    "
-  >
-    Srengenge Surf Camp - Layanan Surf Trip Terbaik di Gunung Kidul Yogyakarta &
-    Jawa Tengah | Pantai Wediombo
-  </h1>
   <div class="hero-content" data-aos="fade-up">
     <img
       src="/img/herotext1.png"
@@ -33,5 +20,22 @@
         SURF NOW
       </a>
     </div>
+    <!-- SEO H1 — visible tapi menyatu dengan hero, bukan hidden -->
+    <h1 class="hero-seo-h1">
+      Srengenge Surf Camp — Surf Trip &amp; Surfing Jawa Tengah di Pantai Wediombo, Gunung Kidul
+    </h1>
   </div>
 </section>
+
+<style>
+  .hero-seo-h1 {
+    font-size: 0.7rem;
+    color: rgba(255, 255, 255, 0.45);
+    font-weight: 400;
+    margin-top: 20px;
+    letter-spacing: 0.03em;
+    text-align: center;
+    max-width: 480px;
+    line-height: 1.5;
+  }
+</style>
