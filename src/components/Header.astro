@@ -200,6 +200,8 @@
 
   function openMenu() {
     mobileMenu?.classList.add("active");
+    burgerBtn?.classList.add("active");
+    burgerBtn?.setAttribute("aria-expanded", "true");
     overlay?.classList.add("active");
     isOpen = true;
     document.body.classList.add("no-scroll");
@@ -207,12 +209,20 @@
 
   function closeMenu() {
     mobileMenu?.classList.remove("active");
+    burgerBtn?.classList.remove("active");
+    burgerBtn?.setAttribute("aria-expanded", "false");
     overlay?.classList.remove("active");
     isOpen = false;
     document.body.classList.remove("no-scroll");
   }
 
-  burgerBtn?.addEventListener('click', openMenu);
+  burgerBtn?.addEventListener('click', () => {
+    if (isOpen) {
+      closeMenu();
+    } else {
+      openMenu();
+    }
+  });
   closeMenuBtn?.addEventListener('click', closeMenu);
   overlay?.addEventListener('click', closeMenu);
   links.forEach(link => link.addEventListener('click', closeMenu));
